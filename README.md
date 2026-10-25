@@ -39,8 +39,10 @@ investigating which genes drive the predictions.
 - Figures: `results/figures/` (PCA, CV boxplot, ROC, feature importance).
 
 **Top genes** (importance, highest first): CDH3, MMP7, FOXQ1, CEMIP, AJUBA, MMP1, MMP3, CLDN1,
-INHBA, CKS2, ACTL6A and others. Several (for example MMP7, FOXQ1, CLDN1, CEMIP) have been
-reported in the literature as altered in colorectal cancer. 
+INHBA, CKS2, ACTL6A and others. Some of these have been linked to colorectal cancer in the
+literature: FOXQ1 was reported as highly expressed in colorectal cancer cells [2], and serum MMP7
+levels were associated with tumor stage and outcome in colorectal cancer patients [1]. This is
+consistent with the model's findings, but it does not validate these genes as biomarkers.
 
 ## Limitations
 - **Perfect scores reflect an easy problem** (tumor vs normal tissue is a strong signal) and a
@@ -58,3 +60,12 @@ python src/prepare_data.py
 python src/run_pipeline.py --csv data/expr.csv --label-col label
 ```
 Python 3.10+; random seed 42. `--demo` runs on synthetic data to test the code only.
+
+
+## References
+1. Zhou Y, Wang L, Zhou F. Clinical Significance of MMP7 Levels in Colorectal Cancer Patients
+   Receiving FOLFOX4 Chemotherapy Treatment. Int J Gen Med. 2023;16:2671-2678.
+   doi:10.2147/IJGM.S416363. PMID: 37398512.
+2. Yang G, Chen H, Ma X, Wang F, Ma G, Qi H. FOXQ1 Suppressing Apoptosis in Colorectal Cancer
+   Cells by P53 Deacetylation. J Coll Physicians Surg Pak. 2025;35(6):722-729.
+   doi:10.29271/jcpsp.2025.06.722. PMID: 40491105.
