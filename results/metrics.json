@@ -1,0 +1,20 @@
+{
+  "data": "data/expr.csv",
+  "best_model": "LogReg",
+  "test_auc": 1.0,
+  "permuted_auc": 0.475,
+  "nested_cv_auc": {
+    "LogReg": [
+      1.0,
+      0.0
+    ],
+    "RandomForest": [
+      1.0,
+      0.0
+    ],
+    "SVM": [
+      1.0,
+      0.0
+    ]
+  }
+}
